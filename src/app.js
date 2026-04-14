@@ -37,11 +37,8 @@ const copy = () => {
   }
 
   if (src === dest) {
-    console.error('Source and destination paths cannot be the same.');
-
     return;
   }
-
 
   const data = fs.readFileSync(src);
 
