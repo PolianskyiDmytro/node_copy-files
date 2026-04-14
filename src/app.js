@@ -12,12 +12,6 @@ const copy = () => {
     return;
   }
 
-  if (src === dest) {
-    console.error('Source and destination paths cannot be the same.');
-
-    return;
-  }
-
   if (!fs.existsSync(src)) {
     console.error(`Source file does not exist: ${src}`);
 
@@ -41,6 +35,13 @@ const copy = () => {
       return;
     }
   }
+
+  if (src === dest) {
+    console.error('Source and destination paths cannot be the same.');
+
+    return;
+  }
+
 
   const data = fs.readFileSync(src);
 
